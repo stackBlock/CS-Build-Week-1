@@ -109,7 +109,7 @@ DATABASES['default']['CONN_MAX_AGE'] = 500
 # Use this config for your deployed PostgresQL DB, comment out when developing or testing locally with sqlite
 # DATABASES = {
 #     'default': dj_database_url.config(default=config('DATABASE_URL'), conn_max_age=600)
-}
+# }
 
 
 # Password validation
