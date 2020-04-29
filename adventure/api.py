@@ -65,3 +65,12 @@ def move(request):
 def say(request):
     # IMPLEMENT
     return JsonResponse({'error':"Not yet implemented"}, safe=True, status=500)
+
+
+@api_view(["GET"])
+def maps(request):
+    all_rooms = Room.objects.all()
+    res = {}
+    for i in all_rooms:
+        res[i.id] = {'x_pos': i.pos_x, 'y_pos':i.pos_y, 'room_type':i.roomtype}
+    return JsonResponse(res)
